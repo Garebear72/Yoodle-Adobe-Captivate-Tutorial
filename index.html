@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link href="assets/css/main.css" rel="stylesheet"/>
+        <title>Yoodle - Adobe Captivate</title>
+    </head>
+    <body>        
+        <!-- Main Container Starts Here -->
+        <div class="container">
+            <h1>Adobe Captivate Information</h1>
+            <p>I made this page to help collect and pool all resources together in one place when it comes to dealing with Adobe Captivate.<br>There's still a lot I don't understand about it, but hopefully what I put together here so far will help you get to the point that I'm at.</p>
+            <h3>Table of Contents</h3>
+            <ul>
+                <li><a href="#helpfulLinks">Helpful Links</a></li>
+                <li><a href="#quiz">Quiz Tutorial</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <hr>
+            <h3 id="helpfulLinks">Helpful Links</h3>
+            <ul>
+                <li><a href="https://elearning.adobe.com/tutorial/" target="_blank">Getting Started With Adobe Captivate</a></li>
+                <li><a href="https://elearning.adobe.com/projects/" target="_blank">Example Projects</a></li>
+                <li><a href="https://helpx.adobe.com/captivate/how-to/create-responsive-projects.html">How to make a Responsive Project</a></li>
+                <ul>
+                    <li>Very good article for if you want to create a project that will be able to flex and bend depending on the size of the user's screen -- as opposed to a normal project where the dimensions are pre-defined.</li>
+                </ul>
+                <li><a href="https://helpx.adobe.com/captivate/user-guide.html/captivate/using/captivate-variables-list.ug.html" target="_blank">Using Variables</a></li>
+                <li><a href="https://elearning.adobe.com/2011/11/where-do-i-specify-the-correct-answer/" target="_blank">Specifying the Correct Answer</a></li>
+                <li><a href="https://helpx.adobe.com/lv/captivate/using/themes.html">Using Themes</a></li>
+                <li><a href="https://elearning.adobe.com/2017/01/all-you-have-to-know-about-captivate-timelines-in-a-cptx-project/">How to use the Timeline</a></li>
+                <ul>
+                    <li>Very important article if your intention is to do anything other than make a simple quiz</li>
+                </ul>
+                <li><a href="https://helpx.adobe.com/captivate/user-guide.html/captivate/using/report-quiz-results-internal-server.ug.html" target="_blank">Configuring Quiz Reporting</a></li>
+            </ul>
+            <hr>
+            <h3 id="quiz">Setting Up and Making a Simple Quiz</h3>
+            <p>Depending on what you want to do, you can select from any of the templates that will suit your needs. For this tutorial, we will be making a short 5 question quiz.</p>
+            <ul>
+                <li class="mb-2">Start up Captivate and you should be greeted with something that looks like this:</li>
+                <a href="assets/images/tut1.png"><img class="img-fluid w-75" src="assets/images/tut1.png"></a>
+                <li class="mt-2">Select <b class="custom-color-1">Blank Project</b> and choose the size you want your project to be. You can resize later if needed.</li>
+                <li>First things first, open the project settings so we can change some things around.</li>
+                <ul>
+                    <li class="mb-2">File > Publish Settings</li>
+                </ul>
+                <a href="assets/images/tut2.png"><img class="img-fluid w-75" src="assets/images/tut2.png"></a>
+                <li class="mt-2 mb-2">Once there, navigate to the <b class="custom-color-1">Quiz Dropdown</b> and expand it's options.</li>
+                <a href="assets/images/tut3.png"><img class="img-fluid w-50" src="assets/images/tut3.png"></a>
+                <ul>
+                    <li class="mt-2">Go to <b class="custom-color-1">Quiz > Reporting</b> to set up parameters for if you would like to <i>do</i> something with your quiz results.</li>
+                        <ul>
+                            <li>
+                                This is a bit complicated and is probably more of a question for Raph or Raj than me, but in short: if the client we are making this for has an LMS (Learning Management System) like Moodle already setup and configured, it would be relatively easy to get this going using the power of a programmer.
+                            </li>
+                            <li>
+                                If the client does not have one and you do not want to use Moodle, you will at the very least need a PHP web server to submit and analyze the data that Captivate collects.
+                            </li>
+                            <li>
+                                For more information on this topic, go <a href="https://helpx.adobe.com/captivate/user-guide.html/captivate/using/report-quiz-results-internal-server.ug.html">here.</a>
+                            </li>
+                        </ul>
+                    <li>Go to <b class="custom-color-1">Quiz > Settings</b> to change the general settings for how your quiz works.</li>
+                        <ul>
+                            <li>
+                                For example, you can change the name of your quiz, choose to shuffle the answers on your quiz, whether or not to provide "back" or "skip" buttons to the user, and more.
+                            </li>
+                        </ul>
+                    <li>Go to <b class="custom-color-1">Quiz > Pass or Fail</b> to setup the grading system.</li>
+                    <ul>
+                        <li>
+                            If you want your quiz to be a "Survey" instead, you can leave this section alone.
+                        </li>
+                    </ul>
+                    <li>Go to <b class="custom-color-1">Default Labels</b> to configure the messages the user receives when a certain action or requirement is fulfilled.</li>
+                    <ul>
+                        <li>
+                            For example, you can change what message is displayed to the user when they get a question incorrect.
+                        </li>
+                    </ul>
+                </ul>
+                <li>For now, we only need to change one setting and it's actually in the <b class="custom-color-1">Defaults</b> tab (Second one down from the top).</li>
+                <ul>
+                    <li class="mb-2">Change slide duration from <b>3</b> to <b>0.1</b>.</li>
+                    <a href="assets/images/tut16.png"><img class="img-fluid" src="assets/images/tut16.png"></a>
+                </ul>
+                <li class="mb-2 mt-2">Exit out of the options window and look at the picture below for info on the 3 main panes you'll be using throughout your project.</li>
+                <a href="assets/images/tut4.png"><img class="img-fluid" src="assets/images/tut4.png"></a>
+                <li class="mt-2">If your project started off anything like mine, your window may be zoomed in too far on the current slide you're looking at.</li>
+                <ul>
+                    <li><b class="custom-color-1">"CTRL +"</b> and <b class="custom-color-1">"CTRL -"</b> (replace CTRL with ⌘ if you use Mac) are used for zooming in and out on the current slide when it is focused.</li>
+                </ul>
+                <li class="mb-2">You should see this now, if you didn't before, in your main viewport.</li>
+                <a href="assets/images/tut5.png"><img class="img-fluid w-50" src="assets/images/tut5.png"></a>
+                <li>Lets customize this first slide and add some content for our user.</li>
+                <ul>
+                    <li class="mt-2">First, <b class="custom-color-1">Right click</b> the text in the slide that says "Double click to add title" and select <b class="custom-color-1">Delete</b>.</li>
+                    <li class="mb-2">Next, go to the toolbar at the top and select the <b class="custom-color-1">Text</b> button, and then select <b class="custom-color-1">Text Caption</b>.</li>
+                    <a href="assets/images/tut6.png"><img class="img-fluid" src="assets/images/tut6.png"></a>
+                    <li class="mt-2">With the new text caption on your slide, left click it and we can get to customizing.</li>
+                    <ul>
+                        <li>If not already toggled on, click the "Properties" button at the top right of Captivate before continuing.</li>
+                        <li>With the text caption selected, you should see a bunch of things in the Properties panel on the right side of your screen.</li>
+                        <li class="mb-2">You can customize everything about the font, including size, color, font-family, spacing, and more. I customized mine as I saw fit, but feel free to do whatever you want with it.</li>
+                        <a href="assets/images/tut7.png"><img class="img-fluid" src="assets/images/tut7.png"></a>
+                        <li class="mt-2">Above is what my text-caption properties look like. Once you're satisfied with it, head back to the slide window and resize it and place it where you would like it to rest.</li>
+                    </ul>
+                </ul>
+                <li>Next lets change the background color of our slide.</li>
+                <ul>
+                    <li>In the main viewport, de-select your text-caption by clicking anywhere where there is whitespace on the slide.</li>
+                    <li class="mb-2">Once you have the actual slide selected, look at your properties view on the right and look for where it says <b class="custom-color-1">Background</b>.</li>
+                    <a href="assets/images/tut8.png"><img class="img-fluid" src="assets/images/tut8.png"></a>
+                    <li class="mt-2">Select the dropdown and click <b class="custom-color-1">Custom</b>.</li>
+                    <li>Now you should see a few more options populate below. Customize them as you see fit and we'll move on to the next step.</li>
+                    <li class="mb-2">Here is what my slide looks like so far.</li>
+                    <a href="assets/images/tut9.png"><img class="img-fluid w-50" src="assets/images/tut9.png"></a>
+                </ul>
+                <li class="mt-2">Now finally, lets add a button so that our user can get to the next slide.</li>
+                <ul>
+                    <li>As a note: Adobe Captivate is a little weird with how their slides work. They are all on a timer (default - 3 seconds) before they progress to the next slide.</li>
+                    <li>Adding anything to a slide that is <b class="custom-color-1">interactable</b>, like a button for example, will pause the slides until they are explicitly told to resume in some way. Therefore, normally you can't just left click anywhere to go to the next slide like you can in Powerpoint for example. That's what our button is going to be for.</li>
+                </ul>
+                <li>
+                    Go to the toolbar at the top of your screen again, and click <b class="custom-color-1">Interactions</b> and then <b class="custom-color-1">Button</b>.
+                </li>
+                <li>
+                    Feel free to rescale your button as you see fit.
+                </li>
+                <ul>
+                    <li>If you would like a little help with aligning the button, you can go to the very top of Captivate (where the buttons File, Edit, etc are located) and select <b class="custom-color-1">Modify > Align > Center Horizontally / Vertically On The Slide</b>.</li>
+                </ul>
+                <li>With the button selected, navigate to your properties window again so we can edit how the button works, looks like, and says.</li>
+                <ul>
+                    <li>To change the text of the button, in the properties window look for where it says "Caption".</li>
+                    <li class="mb-2">To change the color of the button, in the properties window select the dropdown that says <b class="custom-color-1">Text Button</b> and change it to a <b class="custom-color-1">Transparent Button</b> (for solid colors) or an <b class="custom-color-1">Image Button</b> if you have an image you'd like to use as the button.</li>
+                    <a href="assets/images/tut10.png"><img class="img-fluid" src="assets/images/tut10.png"></a>
+                    <li class="mt-2">By default, our button is already set to make the slide continue to the next slide when we first created it.</li>
+                    <ul>
+                        <li>However, it is important to know how to change the buttons action for future reference.</li>
+                        <li class="mb-2">In the properties view, we have been working in the "Style" tab. There are two other tabs for the button -- "Actions" and "Options". We want the <b class="custom-color-1">Actions</b> tab.</li>
+                        <a href="assets/images/tut11.png"><img class="img-fluid" src="assets/images/tut11.png"></a>
+                        <li class="mt-2">Right below where you clicked "Actions" there is an option that says <b class="custom-color-1">On Success</b>. This is what executes as soon as the button is pressed. It should already be set with the correct option, but if it's not, select <b class="custom-color-1">"Go to the next slide"</b>.</li>
+                    </ul>
+                    <li class="mb-2">Now we have our welcome screen setup! This is what mine looks like.</li>
+                    <a href="assets/images/tut12.png"><img class="img-fluid w-50" src="assets/images/tut12.png"></a>
+                </ul>
+                <li class="mt-2">Now for the next part -- the quiz.</li>
+                <ul>
+                    <li>At the very top of your Captivate (where the buttons like File, edit, etc are found), select <b class="custom-color-1">Quiz > Question Slide</b> and a new window will pop up.</li>
+                    <li>This window is where you select what type of questions you want on your quiz, how many of each you want, and if you want those questions to be graded or to act as a survey instead.</li>
+                    <li class="mb-2">Personally I am going to choose 5 true or false questions, graded.</li>
+                    <a href="assets/images/tut13.png"><img class="img-fluid" src="assets/images/tut13.png"></a>
+                    <li class="mt-2">Click OK and 6 new slides will populate for you. 5 question slides, one results slide.</li>
+                    <li>These slides will contain everything you need to have a working survey that will link up to an LMS or other server. They are already configured to display results at the end of the questions, etc.</li>
+                    <li>These slides are also default colored, probably white background and everything. If you don't want to go through each one of them slide by slide and adjust all their colors, values, etc...then this is where something helpful called <b class="custom-color-1">Themes</b> comes into play. To learn more about themes, go <a href="https://helpx.adobe.com/lv/captivate/using/themes.html">here</a>.</li>
+                </ul>
+                <li>Now that we have our quiz created, lets give it some questions and some answers.</li>
+                <ul>
+                    <li class="mb-2">On the first question slide you have, go to the properties panel on the right and click <b class="custom-color-1">Quiz</b> to bring up the options for that current slide. </li>
+                    <a href="assets/images/tut14.png"><img class="img-fluid" src="assets/images/tut14.png"></a>
+                    <ul>
+                        <li class="mt-2">If you wish to change the defaults of what <b>all</b> the slides options will be (instead of on a per-slide basis), you can go back to the very first step where we went to the project settings and looked glanced over the quiz section.</li>
+                    </ul>
+                    <li>This area is where we define how this specific slide will work. Whether we want to provide a "skip" button, whether we want to display text when the user gets an answer correct/incorrect, how many tries does this person get, and more.</li>
+                    <li>Feel free to mess around with this on every single slide if you wish, or leave it as is for now.</li>
+                </ul>
+                <li>Now lets actually add in some questions and answers.</li>
+                <ul>
+                    <li>If you chose True/False questions like me, this will be relatively easy. If you chose other type of questions, refer to <a href="https://elearning.adobe.com/2011/11/where-do-i-specify-the-correct-answer/">this article</a> on how to select what the correct answer is for your type of question.</li>
+                    <li>Once you've entered your question, and the possible answers, the easiest way to indicate what the correct answer is is by clicking the little radio button next to it. That's it!</li>
+                    <li class="mb-2">As you can see in the image below, I selected the little radio button next to the correct answer, "False", because my name is in fact <i>not Tim</i>.</li>
+                    <a href="assets/images/tut15.png"><img class="img-fluid w-50" src="assets/images/tut15.png"></a>
+                    <li class="mt-2">Do the same for the rest of the slides however you want, and then when you're ready, click the last slide.</li>
+                </ul>
+                <li>The last slide is the "Results" slide. </li>
+                <ul>
+                    <li>If you go to the properties tab and select "Quiz" again (make sure you have something on this slide selected so you know you're in the right place) you can select what will appear on this slide, and what will not.</li>
+                    <li>Obviously, I made a graded quiz, so I'm going to leave everything checked except for "Quiz Attempts" -- since I'm not allowing retakes on my quiz.</li>
+                </ul>
+                <li>If you've followed along so far, you should have a fully functioning quiz (except for the Reporting of Results part).</li>
+                <li>To test your slides/quiz, go to the top toolbar again and click on <b class="custom-color-1">Preview</b>.</li>
+                <ul>
+                    <li>Here you can choose how you want to preview your quiz. There are two main ways I use to preview my slides.</li>
+                    <ul>
+                        <li>HTML5 In Browser will launch your quiz in a browser, as if it was uploaded to a website.</li>
+                        <li>From This Slide will launch your quiz on your computer. It will also only play the slide you are on and everything that comes after it.</li>
+                    </ul>
+                </ul>
+                <li>Once you launch your project, you'll notice there's this somewhat tacky looking bar at the bottom of your slides. This is called the <b class="custom-color-1">Playbar</b>. I personally despise how this bar looks, feels, and works -- and disable it every chance I get. Instead I create buttons and ways to interact with the slides myself without relying on the playbar.</li>
+                <ul>
+                    <li>If you'd like to disable the playbar completely:</li>
+                    <ul>
+                        <li>Navigate to <b class="custom-color-1">Project > Skin Editor</b> (or Shift+F11)</li>
+                        <li>Uncheck the first box that says "Show Playback Control"</li>
+                    </ul>
+                    <li>If you'd like to only disable the playbar during a quiz, but have it available at all other times:</li>
+                    <ul>
+                        <li>Go to <b class="custom-color-1">File > Publish Settings</b> again, then navigate to <b class="custom-color-1">Quiz > Settings</b>. At the very bottom there is a check box labeled: "Hide Playbar In Quiz"</li>
+                    </ul>
+                </ul>
+                <li>Alright! You tested your quiz, hopefully it all works well enough. Now all that's left is to publish it.</li>
+                <ul>
+                    <li>At the top of the Captivate window, right next to "Preview" is "Publish".</li>
+                    <li>Publish the project to your computer, then navigate to the directory you chose, and there you go! Those are all the source files for your quiz, ready to be implemented into whatever project you might want to throw them in.</li>
+                </ul> 
+            </ul>
+            <hr>
+            <h3 id="faq">FAQ</h3>
+            <ul>
+                <li>How do I resize my project?</li>
+                <p>If you aren't using a responsive project, you can easily resize your project by going to <b class="custom-color-1">Modify > Rescale Project</b></p>
+            </ul>
+        </div>
+        <!-- Main Container Ends Here -->
+        
+
+        <!-- Put your JS below these scripts -->
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    </body>
+</html>
