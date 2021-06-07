@@ -18,7 +18,17 @@ body {
     color: red;
 }
 
-a:link {
+.w-100-at-992 {
+    width: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .w-100-at-992 {
+        width: 100%;
+    }
+}
+
+/* a:link {
     color:orange;
 }
 a:visited {
@@ -26,4 +36,4 @@ a:visited {
 }
 a:hover {
     color: orangered;
-}
+} */
