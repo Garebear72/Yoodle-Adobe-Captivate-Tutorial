@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-toward.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective.css"/>
         <link href="css/main.css" rel="stylesheet"/>
         <title>Yoodle - Adobe Captivate</title>
     </head>
@@ -36,19 +40,16 @@
             <hr>
             <h1 id="quiz">Setting Up and Making a Simple Quiz</h1>
             <p>Depending on what you want to do, you can select from any of the templates that will suit your needs. For this tutorial, we will be making a short 5 question quiz.</p>
+            <p class="text-info">P.S. Hovering over <span id="popper-info" class="popover-custom">Red Text</span> could be useful!</p>
             <ul>
                 <li class="mb-2">Start up Captivate and you should be greeted with something that looks like this:</li>
                 <a href="assets/images/tut1.png"><img class="img-fluid w-75" src="assets/images/tut1.png"></a>
-                <li class="mt-2">Select <b class="custom-color-1">Blank Project</b> and choose the size you want your project to be. You can resize later if needed.</li>
-                <ul>
-                    <li>For the purpose of this project, to help make things simpler, we are going with "Blank Project". However, you should get in the groove of using "Responsive Project" as it is much more user friendly, adapts to screen sizes, and if you know anything about HTML/CSS -- it's basically flexbox but with a GUI.</li>
-                </ul>
+                <li class="mt-2">Select <b class="custom-color-1">Blank Project</b> and choose the size you want your project to be.<br>Normally, you'd want <span id="popper8" class="popover-custom">Responsive Project</span>, but to make this tutorial shorter we're gonna stick with Blank.</li>
                 <li>First things first, open the project settings so we can change some things around.</li>
                 <ul>
-                    <li class="mb-2">File > Publish Settings</li>
+                    <li><span id="popper4" class="popover-custom">File > Publish Settings</span></li>
                 </ul>
-                <a href="assets/images/tut2.png"><img class="img-fluid w-75" src="assets/images/tut2.png"></a>
-                <li class="mt-2 mb-2">Once there, navigate to the <b class="custom-color-1">Quiz Dropdown</b> and expand it's options.</li>
+                <li class="mb-2">Once there, navigate to the <b class="custom-color-1">Quiz Dropdown</b> and expand it's options.</li>
                 <a href="assets/images/tut3.png"><img class="img-fluid w-50" src="assets/images/tut3.png"></a>
                 <ul>
                     <li class="mt-2">Go to <b class="custom-color-1">Quiz > Reporting</b> to set up parameters for if you would like to <i>do</i> something with your quiz results.</li>
@@ -87,12 +88,9 @@
                     <li class="mb-2">Change slide duration from <b>3</b> to <b>0.1</b>.</li>
                     <a href="assets/images/tut16.png"><img class="img-fluid" src="assets/images/tut16.png"></a>
                 </ul>
-                <li class="mb-2 mt-2">Exit out of the options window and look at the picture below for info on the 3 main panes you'll be using throughout your project.</li>
+                <li class="mb-2 mt-2">Exit out of the options window and look at the picture below for info on the 3 main <span id="popper9" class="popover-custom">panes</span> you'll be using throughout your project.</li>
                 <a href="assets/images/tut4.png"><img class="img-fluid" src="assets/images/tut4.png"></a>
-                <li class="mt-2">If your project started off anything like mine, your window may be zoomed in too far on the current slide you're looking at.</li>
-                <ul>
-                    <li><b class="custom-color-1">"CTRL +"</b> and <b class="custom-color-1">"CTRL -"</b> (replace CTRL with ⌘ if you use Mac) are used for zooming in and out on the current slide when it is focused.</li>
-                </ul>
+                <li class="mt-2">If your project started off anything like mine, your window may be <span id="popper7" class="popover-custom">zoomed in too far</span> on the current slide you're looking at.</li>
                 <li class="mb-2">You should see this now, if you didn't before, in your main viewport.</li>
                 <a href="assets/images/tut5.png"><img class="img-fluid w-50" src="assets/images/tut5.png"></a>
                 <li>Lets customize this first slide and add some content for our user.</li>
@@ -102,7 +100,7 @@
                     <a href="assets/images/tut6.png"><img class="img-fluid" src="assets/images/tut6.png"></a>
                     <li class="mt-2">With the new text caption on your slide, left click it and we can get to customizing.</li>
                     <ul>
-                        <li>If not already toggled on, click the "Properties" button at the top right of Captivate before continuing.</li>
+                        <li>If not already toggled on, click the <span id="popper10" class="popover-custom">"Properties"</span> button at the top right of Captivate before continuing.</li>
                         <li>With the text caption selected, you should see a bunch of things in the Properties panel on the right side of your screen.</li>
                         <li class="mb-2">You can customize everything about the font, including size, color, font-family, spacing, and more. I customized mine as I saw fit, but feel free to do whatever you want with it.</li>
                         <a href="assets/images/tut7.png"><img class="img-fluid" src="assets/images/tut7.png"></a>
@@ -122,7 +120,7 @@
                 <li class="mt-2">Now finally, lets add a button so that our user can get to the next slide.</li>
                 <ul>
                     <li>As a note: Adobe Captivate is a little weird with how their slides work. They are all on a timer (default - 3 seconds) before they progress to the next slide.</li>
-                    <li>Adding anything to a slide that is <b class="custom-color-1">interactable</b>, like a button for example, will pause the slides until they are explicitly told to resume in some way. Therefore, normally you can't just left click anywhere to go to the next slide like you can in Powerpoint for example. That's what our button is going to be for.</li>
+                    <li>Adding anything to a slide that is <span id="popper1" class="popover-custom">interactable</span>, like a button for example, will pause the slides until they are explicitly told to resume in some way.</li>
                 </ul>
                 <li>
                     Go to the toolbar at the top of your screen again, and click <b class="custom-color-1">Interactions</b> and then <b class="custom-color-1">Button</b>.
@@ -131,7 +129,7 @@
                     Feel free to rescale your button as you see fit.
                 </li>
                 <ul>
-                    <li>If you would like a little help with aligning the button, you can go to the very top of Captivate (where the buttons File, Edit, etc are located) and select <b class="custom-color-1">Modify > Align > Center Horizontally / Vertically On The Slide</b>.</li>
+                    <li>If you would like a little help with aligning the button, you can go to the very <span id="popper5" class="popover-custom">top of Captivate</span> and select <b class="custom-color-1">Modify > Align > Center Horizontally / Vertically On The Slide</b>.</li>
                 </ul>
                 <li>With the button selected, navigate to your properties window again so we can edit how the button works, looks like, and says.</li>
                 <ul>
@@ -150,7 +148,7 @@
                 </ul>
                 <li class="mt-2">Now for the next part -- the quiz.</li>
                 <ul>
-                    <li>At the very top of your Captivate (where the buttons like File, edit, etc are found), select <b class="custom-color-1">Quiz > Question Slide</b> and a new window will pop up.</li>
+                    <li>At the very <span id="popper5" class="popover-custom">top of Captivate</span> select <b class="custom-color-1">Quiz > Question Slide</b> and a new window will pop up.</li>
                     <li>This window is where you select what type of questions you want on your quiz, how many of each you want, and if you want those questions to be graded or to act as a survey instead.</li>
                     <li class="mb-2">Personally I am going to choose 5 true or false questions, graded.</li>
                     <a href="assets/images/tut13.png"><img class="img-fluid" src="assets/images/tut13.png"></a>
@@ -163,7 +161,7 @@
                     <li class="mb-2">On the first question slide you have, go to the properties panel on the right and click <b class="custom-color-1">Quiz</b> to bring up the options for that current slide. </li>
                     <a href="assets/images/tut14.png"><img class="img-fluid" src="assets/images/tut14.png"></a>
                     <ul>
-                        <li class="mt-2">If you wish to change the defaults of what <b>all</b> the slides options will be (instead of on a per-slide basis), you can go back to the very first step where we went to the project settings and looked glanced over the quiz section.</li>
+                        <li class="mt-2">If you wish to <span id="popper11" class="popover-custom">change the defaults</span> of what <b>all</b> the slides options will be (instead of on a per-slide basis), you can go back to the very first step where we went to the project settings and looked glanced over the quiz section.</li>
                     </ul>
                     <li>This area is where we define how this specific slide will work. Whether we want to provide a "skip" button, whether we want to display text when the user gets an answer correct/incorrect, how many tries does this person get, and more.</li>
                     <li>Feel free to mess around with this on every single slide if you wish, or leave it as is for now.</li>
@@ -190,7 +188,7 @@
                         <li>From This Slide will launch your quiz on your computer. It will also only play the slide you are on and everything that comes after it.</li>
                     </ul>
                 </ul>
-                <li>Once you launch your project, you'll notice there's this somewhat tacky looking bar at the bottom of your slides. This is called the <b class="custom-color-1">Playbar</b>. I personally despise how this bar looks, feels, and works -- and disable it every chance I get. Instead I create buttons and ways to interact with the slides myself without relying on the playbar.</li>
+                <li>Once you launch your project, you'll notice there's this somewhat tacky looking bar at the bottom of your slides. This is called the <b class="custom-color-1">Playbar</b>. I personally dislike how this bar looks, feels, and works -- and disable it every chance I get. Instead I create buttons and ways to interact with the slides myself without relying on the playbar.</li>
                 <ul>
                     <li>If you'd like to disable the playbar completely:</li>
                     <ul>
@@ -215,7 +213,10 @@
         <!-- Put your JS below these scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
         <script src="js/goToTop.js"></script>
+        <script src="js/popups.js"></script>
         
     </body>
 </html>
