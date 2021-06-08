@@ -40,6 +40,7 @@ tippy('#popper4', {
   allowHTML: true,
   placement: 'auto',
   animation: 'perspective',
+  maxWidth: 200,
   duration: 400,
   content: '<img class="img-fluid" src="assets/images/faq4.png">',
   trigger: 'mouseenter focus click'
@@ -104,7 +105,7 @@ tippy('#popper10', {
 
 tippy('#popper11', {
   allowHTML: true,
-  placement: 'top',
+  placement: 'auto',
   animation: 'perspective',
   offset: [75, 10],
   maxWidth: 700,
