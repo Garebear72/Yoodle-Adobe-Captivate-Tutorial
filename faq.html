@@ -12,9 +12,18 @@
         <link href="css/main.css" rel="stylesheet"/>
         <title>Yoodle - Adobe Captivate</title>
     </head>
-    <body>        
+    <body>
+        <div style="position: sticky; top: 93%; float: right;" id="hovering-up-div-id" class="invisible">
+            <a href="#top">
+            <button class="hovering-up-button btn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-up-circle-fill text-warning" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+                </svg>
+            </button>
+            </a>
+        </div>
         <!-- Main Container Starts Here -->
-        <div class="container">
+        <div id="top" class="container">
             <h1>Adobe Captivate Information</h1>
             <p>This resource was created to help assist others like myself get through the basics quickly and efficiently.<br>Everything that is on here is here because it was a question that I needed answering at one time.</p>
             <h1>Table of Contents</h1>
@@ -127,5 +136,6 @@
         <script src="https://unpkg.com/@popperjs/core@2"></script>
         <script src="https://unpkg.com/tippy.js@6"></script>
         <script src="js/popups.js"></script>
+        <script src="js/goToTop.js"></script>
     </body>
 </html>
