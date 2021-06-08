@@ -15,16 +15,37 @@ body {
 }
 
 .custom-color-1 {
-    color: red;
+    color: rgb(255, 102, 0)
 }
 
+.accordion-button {
+    background-color: #A52D40 !important;
+    color: white !important;
+}
 
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
 a:link {
-    color:orange;
+    color:red;
+    font-weight: bold;
+
 }
 a:visited {
-    color:rgb(238, 255, 0);
+    color:red;
+    font-weight: bold;
+
 }
 a:hover {
     color: orangered;
+    font-weight: bold;
+}
+
+.popover-custom {
+    user-select: none;
+    color:red;
+    cursor: help;
+    font-weight: bold;
+    font-style: italic;
 }

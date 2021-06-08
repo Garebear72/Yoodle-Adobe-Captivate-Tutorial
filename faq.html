@@ -5,6 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-toward.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/perspective.css"/>
         <link href="css/main.css" rel="stylesheet"/>
         <title>Yoodle - Adobe Captivate</title>
     </head>
@@ -13,22 +17,106 @@
         <div class="container">
             <h1>Adobe Captivate Information</h1>
             <p>This resource was created to help assist others like myself get through the basics quickly and efficiently.<br>Everything that is on here is here because it was a question that I needed answering at one time.</p>
-            <h3>Table of Contents</h3>
+            <h1>Table of Contents</h1>
             <div class="row">
                 <div class="col">
                     <div class="d-flex flex-column gap-2 align-items-stretch">
                         <a class="btn btn-warning text-decoration-none text-dark text-capitalize fs-5" href="index.html">Helpful Links</a>
                         <a class="btn btn-warning text-decoration-none text-dark text-capitalize fs-5" href="quiz-tutorial.html">Quiz Tutorial</a>
-                        <a class="btn btn-danger text-decoration-none text-dark text-capitalize fs-5 disabled" href="#">FAQ</a>
+                        <a class="btn btn-danger text-decoration-none text-white text-capitalize fs-5 disabled" href="#">FAQ</a>
                     </div>
                 </div>
             </div>
             <hr>
-            <h3 id="faq">FAQ</h3>
-            <ul>
-                <li>How do I resize my project?</li>
-                <p>If you aren't using a responsive project, you can easily resize your project by going to <b class="custom-color-1">Modify > Rescale Project</b></p>
-            </ul>
+            <h1 id="faq">Frequently Asked Questions</h1>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong class="fs-5">How do I resize my project?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            You can easily resize your project by going to <b class="custom-color-1">Modify > Rescale Project</b>.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <strong class="fs-5">How do I keep the slides from advancing on their own?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            You can easily resize your project by going to <b class="custom-color-1">Modify > Rescale Project</b>.
+                            <ol class="mb-0 pb-0">
+                                <li>Add something <span id="popper1" class="popover-custom">interactive</span> to the slide to keep it from progressing automatically.</li>
+                                <ul>
+                                    <li style="font-style: italic;">Make sure the user still has a way to get to the next slide, whether that is through the use of a <a style="font-style: normal;" href="https://helpx.adobe.com/in/captivate/using/click-boxes.html" target="_blank">Click Box</a> covering the entire slide, or maybe a Button instead, for example.</li>
+                                </ul>
+                                <li class="mb-0 pb-0">If you just don't want the current slide to advance as quickly, you can easily increase the duration of the slide by opening the <span id="popper2" class="popover-custom">Timeline Menu</span> and adjusting the time for each slide.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                            <strong class="fs-5">How do I change _________ on this item in my slide?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                                Chances are pretty high that the option you're looking for is in the <span id="popper3" class="popover-custom">Properties Window</span> of whatever item you might need to change.
+                                <br>
+                                <br>
+                                If it's not there, try checking in the <span id="popper4" class="popover-custom">general settings</span> of the project. 
+                                <br>
+                                <br>
+                                If it is specific to Quizzes, Audio, Video, or anything else that wouldn't fall under "general settings", you can try hovering over their name at the <span id="popper5" class="popover-custom">top of the window</span> to see if the option you need is located there.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <strong class="fs-5">What are themes and how do I use them?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Themes are a fantastic way to avoid having to customize every single slide as you go. All you gotta do is create them once (or find one you like), and use them as much as you want.<br><br>Go <a href="https://helpx.adobe.com/lv/captivate/using/themes.html">here</a> to learn all about how themes will make your life 1000x easier.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <strong class="fs-5">How do I set up reporting for survey answers / quizzes?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            This <a href="https://helpx.adobe.com/captivate/user-guide.html/captivate/using/report-quiz-results-internal-server.ug.html">link</a> will be your best friend.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item bg-dark">
+                    <h2 class="accordion-header" id="headingSix">
+                        <button class="accordion-button bg-danger" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            <strong class="fs-5">How do I display a variable in text box?</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           When you are currently focused and typing into a text box, on the right side of your screen will be a button that <span id="popper6" class="popover-custom">looks like this</span>. Click it, select the variable/options you want, and click "OK"!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End of accordion -->
         </div>
         <!-- Main Container Ends Here -->
         
@@ -36,5 +124,8 @@
         <!-- Put your JS below these scripts -->
         <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <script src="https://unpkg.com/tippy.js@6"></script>
+        <script src="js/popups.js"></script>
     </body>
 </html>
