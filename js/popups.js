@@ -104,9 +104,10 @@ tippy('#popper10', {
 
 tippy('#popper11', {
   allowHTML: true,
-  placement: 'auto',
+  placement: 'top',
   animation: 'perspective',
-  maxWidth: 1000,
+  offset: [75, 10],
+  maxWidth: 700,
   duration: 400,
   content: '<p class="fs-4 mb-1">Remember when we did this? <br>The default settings for the project are in there.</p><img class="img-fluid" src="assets/images/tut2.png">',
   trigger: 'mouseenter focus click'

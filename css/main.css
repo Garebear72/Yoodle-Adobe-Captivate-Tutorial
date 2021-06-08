@@ -21,6 +21,8 @@ body {
 .accordion-button {
     background-color: #A52D40 !important;
     color: white !important;
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 !important;
 }
 
 a{

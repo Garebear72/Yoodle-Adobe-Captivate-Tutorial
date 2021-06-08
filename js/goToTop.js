@@ -46,7 +46,7 @@ window.addEventListener("scroll", function(){
     throttlescroll = setTimeout(function(){ 
         // throttle code inside scroll to once every 50 milliseconds
         amountscrolled()
-    }, 1);
+    }, 7);
 }, false)
 
 
