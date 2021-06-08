@@ -51,12 +51,12 @@ a:hover {
 }
 
 .hovering-up-div {
-    animation: fade-in 0.5s ease-in-out forwards;
+    animation: fade-in 0.3s linear forwards;
     
 }
 
 .hovering-down-div {
-    animation: fade-out 0.5s ease-in-out forwards;
+    animation: fade-out 0.3s linear forwards;
 }
 
 .hovering-up-button {
